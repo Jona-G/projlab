@@ -1,0 +1,4 @@
+Elindítjuk a játékot az 12345 seed beállítással, ahol már az első körben elromlik a pump0.
+
+2-szer forduljon elő (push-nál és pull-nál):
+pump0.isDamaged()
