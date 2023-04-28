@@ -45,6 +45,12 @@ public class Pipe extends VulnerableField {
 	}
 	
 	@Override
+	public boolean fieldIsSlippery() {
+		System.out.println(this + ".fieldIsSlippery()");
+		return slipperyTime > 0;
+	}
+	
+	@Override
 	public void tryToBecomeSticky() {
 		System.out.println(this + ".tryToBecomeSticky()");
 		System.out.println("Ragados lett a cso.");
