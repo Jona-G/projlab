@@ -1,0 +1,8 @@
+Ebben a tesztben egy szerelőt elmozgatok a hozzá legközelebb lévő pumpára, aminek átállítom a szívófejét.
+Ez idő alatt a többi játékos nem csinál semmit.
+
+
+pump0.selectInput(pipe1):
+ legyen pontosan egyszer, azaz a szerelő a 0-s pumpának a szívófejét állítsa át 
+az 1-es csőre.
+
