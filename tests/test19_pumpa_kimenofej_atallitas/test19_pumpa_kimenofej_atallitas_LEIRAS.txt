@@ -1,5 +1,0 @@
-Ebben a tesztben a kimenőfej átállítása tesztelődik. Egy szerelővel (a 0-al) elmegyek a 
-hozzá legközelebbi pumpához (pump0) és a pipe1-et beállítom
-
-pump0.selectOutput(pipe1):
-Ezt kell egyszer tartalmaznia a kimenetnek.

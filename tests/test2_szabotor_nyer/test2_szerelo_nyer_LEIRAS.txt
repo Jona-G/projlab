@@ -1,7 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, szabotőrök lépnek és kilyukasztják a ciszternákkal szomszédos csöveket, ezzel az összes vizet elfolyatják és a szabotőrök nyernek.
-
-0-szor forduljon elő:
-Game.increaseRepairmanScore(1)
-
-100-szor forduljon elő:
-Game.increaseSaboteurScore(1)

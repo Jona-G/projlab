@@ -1,6 +1,0 @@
-Addig leptetem a köröket, amíg a pályán először el kell, hogy érje a víz a 2 ciszternát,
-mindkettőbe kell, hogy folyjon víz.
-
-goToCistern
-2 viz kell, hogy jusson ennyi kör alatt 1-1 ciszternába
-tehát 2-szer kell meghívódnia.
