@@ -209,19 +209,6 @@ if %counter1%==1 (
   	echo TEST11_PUMPAT_NEM_TUD_LERAKNI_MERT_NINCS_NEKI Fail! Nincs nala pumpa, amit le lehetne rakni count is not 1.
 )
 
-::david_test_vege
-
-
-
-
-
-
-
-
-
-
-
-
 
 :: Test17 - Szabotőr csövet lyukaszt ki
 java application/Program norandom < tests/test17_szabotor_csovet_lyukaszt/test17_input_szabotor_csovet_lyukaszt.txt > tests/test17_szabotor_csovet_lyukaszt/test17_output_szabotor_csovet_lyukaszt.txt
@@ -314,7 +301,7 @@ if "%count_goToCistern%"=="---------- TESTS/TEST23_CISZTERNABA_FOLYAT/TEST23_OUT
 
 :: Test24 -Cső megjavítása
 java application/Program norandom < tests/test24_cso_megjavitasa/test24_setup.txt > tests/test24_cso_megjavitasa/test24_setup_output.txt
-::Az elozo sorban levo input kilyukasztja pipe0-t (a szabotőr azon álla futás befejeztekor)
+::Az elozo sorban levo input kilyukasztja pipe0-t (a szabotőr azon áll a futás befejeztekor)
 java application/Program norandom < tests/test24_cso_megjavitasa/test24_input_cso_megjavitasa.txt > tests/test24_cso_megjavitasa/test24_output_cso_megjavitasa.txt
 set count_repairman0Repair=0
 set count_serthetetlen=0
@@ -400,4 +387,61 @@ if "%count_pump0damaged%"=="---------- TESTS/TEST37_PUMPA_MEGJAVITASA/TEST37_OUT
 	)
 ) else (
   	echo TEST37_PUMPA_MEGJAVITASA Fail! repairman located at pump0 [damaged] count is not 1.
+)
+
+:: Test38 - Cső csúszóssá válik
+java application/Program norandom < tests/test38_cso_csuszossa_valik/test38_input_cso_csuszossa_valik.txt > tests/test38_cso_csuszossa_valik/test38_output_cso_csuszossa_valik.txt
+
+set "parancs=findstr /R /N pipe[0-9]*\.tryToBecomeSlippery() tests\test38_cso_csuszossa_valik\test38_output_cso_csuszossa_valik.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N Csuszos.lett.a.cso tests\test38_cso_csuszossa_valik\test38_output_cso_csuszossa_valik.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST38_CSO_CSUSZOSSA_VALIK Success!	
+	) else (
+		echo TEST38_CSO_CSUSZOSSA_VALIK Fail! Csuszos lett a cso count is not 1.
+	)
+) else (
+  	echo TEST38_CSO_CSUSZOSSA_VALIK Fail! pipe*.tryToBecomeSlippery(^) count is not 1.
+)
+
+:: Test39 - Ragadós csőre lépés
+java application/Program norandom < tests/test39_ragados_csore_lepes/test39_input_ragados_csore_lepes.txt > tests/test39_ragados_csore_lepes/test39_output_ragados_csore_lepes.txt
+
+set "parancs=findstr /R /N pipe[0-9]*\.clearSticky() tests\test39_ragados_csore_lepes\test39_output_ragados_csore_lepes.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N Ragacsos.csore.lepett tests\test39_ragados_csore_lepes\test39_output_ragados_csore_lepes.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST39_RAGADOS_CSORE_LEPES Success!	
+	) else (
+		echo TEST39_RAGADOS_CSORE_LEPES Fail! Ragacsos csore lepett count is not 1.
+	)
+) else (
+  	echo TEST39_RAGADOS_CSORE_LEPES Fail! pipe*.clearSticky(^) count is not 1.
+)
+
+:: Test40 - Csúszós csőre lépés
+java application/Program norandom < tests/test40_csuszos_csore_lepes/test40_input_csuszos_csore_lepes.txt > tests/test40_csuszos_csore_lepes/test40_output_csuszos_csore_lepes.txt
+
+set "parancs=findstr /R /N pipe[0-9]*\.tryToBecomeSlippery() tests\test40_csuszos_csore_lepes\test40_output_csuszos_csore_lepes.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N At.fog.csuszni.valahova tests\test40_csuszos_csore_lepes\test40_output_csuszos_csore_lepes.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST40_CSUSZOS_CSORE_LEPES Success!	
+	) else (
+		echo TEST40_CSUSZOS_CSORE_LEPES Fail! Csuszos lett a cso count is not 1.
+	)
+) else (
+  	echo TEST40_CSUSZOS_CSORE_LEPES Fail! pipe*.tryToBecomeSlippery(^) count is not 1.
 )

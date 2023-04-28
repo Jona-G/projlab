@@ -882,8 +882,6 @@ pipe1.isDamaged() nem serult
 pipe1.getNeighbors()
 pipe1.receiveWater(water6)
 pump1.push()
-pump1.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump1.isDamaged() nem serult
 pump1.hasWater() van vize
 pipe2.hasWater() nincs vize

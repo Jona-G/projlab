@@ -346,6 +346,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water1)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() nincs vize
 cistern0.push() Nem csinal semmit.
@@ -1004,8 +1006,6 @@ pipe2.isDamaged() serult
 water4.goToWaste()
 Game.increaseSaboteurScore(1)
 pump2.push()
-pump2.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump2.isDamaged() nem serult
 pump2.hasWater() van vize
 pipe4.hasWater() nincs vize
@@ -1235,6 +1235,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water9)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize
@@ -1638,6 +1640,8 @@ pipe3.isDamaged() nem serult
 pipe3.getNeighbors()
 pipe3.receiveWater(water15)
 pump0.push()
+pump0.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -1647,8 +1651,6 @@ pipe1.isDamaged() nem serult
 pipe1.getNeighbors()
 pipe1.receiveWater(water12)
 pump1.push()
-pump1.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump1.isDamaged() nem serult
 pump1.hasWater() van vize
 pipe2.hasWater() nincs vize
@@ -2515,8 +2517,6 @@ pipe1.isDamaged() nem serult
 pipe1.getNeighbors()
 pipe1.receiveWater(water20)
 pump1.push()
-pump1.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump1.isDamaged() nem serult
 pump1.hasWater() van vize
 pipe2.hasWater() nincs vize
@@ -3959,8 +3959,6 @@ pipe1.isDamaged() nem serult
 pipe1.getNeighbors()
 pipe1.receiveWater(water38)
 pump1.push()
-pump1.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump1.isDamaged() nem serult
 pump1.hasWater() van vize
 pipe2.hasWater() nincs vize
@@ -4154,8 +4152,6 @@ pipe1.isDamaged() nem serult
 pipe1.getNeighbors()
 pipe1.receiveWater(water42)
 pump1.push()
-pump1.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump1.isDamaged() nem serult
 pump1.hasWater() van vize
 pipe2.hasWater() nincs vize
@@ -4744,6 +4740,8 @@ pipe2.isDamaged() serult
 water50.goToWaste()
 Game.increaseSaboteurScore(1)
 pump2.push()
+pump2.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump2.isDamaged() nem serult
 pump2.hasWater() van vize
 pipe4.hasWater() nincs vize
@@ -4919,6 +4917,8 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water65)
 pump0.push()
+pump0.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -5498,8 +5498,6 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water77)
 pump0.push()
-pump0.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -5720,6 +5718,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water76)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize
@@ -6299,6 +6299,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water88)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize
@@ -6878,8 +6880,6 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water100)
 pump3.push()
-pump3.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize
@@ -7239,8 +7239,6 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water113)
 pump0.push()
-pump0.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -7461,6 +7459,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water112)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize
@@ -8592,6 +8592,8 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water141)
 pump0.push()
+pump0.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -9943,8 +9945,6 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water169)
 pump0.push()
-pump0.breaksDown()
-Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -10717,6 +10717,8 @@ pipe9.isDamaged() nem serult
 pipe9.getNeighbors()
 pipe9.receiveWater(water185)
 pump0.push()
+pump0.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump0.isDamaged() nem serult
 pump0.hasWater() van vize
 pipe1.hasWater() nincs vize
@@ -10937,6 +10939,8 @@ pipe4.isDamaged() nem serult
 pipe4.getNeighbors()
 pipe4.receiveWater(water184)
 pump3.push()
+pump3.breaksDown()
+Random kikapcsolva, nem romlik el.
 pump3.isDamaged() nem serult
 pump3.hasWater() van vize
 pipe5.hasWater() nincs vize

@@ -1,0 +1,7 @@
+Elindítjuk a játékot norandom módon, az egyik szabotőr csúszóssá teszi az egyik ciszternával szomszédos bekötött csövet, majd később ő rá is lép erre a csúszós csőre.
+
+1-szer forduljon elő:
+pipe*.tryToBecomeSlippery()
+
+1-szer forduljon elő:
+At fog csuszni valahova...
