@@ -1,4 +1,4 @@
 Elindítjuk a játékot norandom kapcsolóval, az egyik szerelő átsétál a ciszternára, kap egy pumpát, lelép, majd visszalép, és nem kaphat új pumpát. Ezt követően kilépünk.
 
 1-szer forduljon elő:
-repairman1.receivePump(pump4)
+repairman*.receivePump(pump*)
