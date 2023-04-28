@@ -106,6 +106,119 @@ if %counter1%==1 (
   	echo TEST6_SZERELO_NEM_KAP_PUMPAT_HA_MAR_VAN_NEKI Fail! repairman*.receivePump(pump*^) count is not 1.
 )
 
+:: Test7 - Pumpat sikeresel larak csore
+java application/Program norandom < tests/test7_pumpat_sikeresen_lerak_csore/test7_input_pumpat_sikeresen_lerak_csore.txt > tests/test7_pumpat_sikeresen_lerak_csore/test7_output_pumpat_sikeresen_lerak_csore.txt
+
+set "parancs=findstr /R /N repairman[0-9]*\.receivePump(pump[0-9]*) tests\test7_pumpat_sikeresen_lerak_csore\test7_output_pumpat_sikeresen_lerak_csore.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N A.pumpa.sikeresen.lerakva tests\test7_pumpat_sikeresen_lerak_csore\test7_output_pumpat_sikeresen_lerak_csore.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST7_PUMPAT_SIKERESEN_LERAK_CSORE Success!	
+	) else (
+		echo TEST7_PUMPAT_SIKERESEN_LERAK_CSORE Fail! A pumpa sikeresen lerakva count is not 1.
+	)
+) else (
+  	echo TEST7_PUMPAT_SIKERESEN_LERAK_CSORE Fail! repairman*.receivePump(pump*^) count is not 1.
+)
+
+:: Test8 - Pumpat nem tud forrasra lerakni
+java application/Program norandom < tests/test8_pumpat_nem_tud_forrasra_lerakni/test8_input_pumpat_nem_tud_forrasra_lerakni.txt > tests/test8_pumpat_nem_tud_forrasra_lerakni/test8_output_pumpat_nem_tud_forrasra_lerakni.txt
+
+set "parancs=findstr /R /N source[0-9]*\.receivePump(pump[0-9]*) tests\test8_pumpat_nem_tud_forrasra_lerakni\test8_output_pumpat_nem_tud_forrasra_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N A.pumpa.sikeresen.lerakva tests\test8_pumpat_nem_tud_forrasra_lerakni\test8_output_pumpat_nem_tud_forrasra_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST8_PUMPAT_NEM_TUD_FORRASRA_LERAKNI Success!	
+	) else (
+		echo TEST8_PUMPAT_NEM_TUD_FORRASRA_LERAKNI Fail! A pumpa sikeresen lerakva count is not 0.
+	)
+) else (
+  	echo TEST8_PUMPAT_NEM_TUD_FORRASRA_LERAKNI Fail! source*.receivePump(pump*^) count is not 1.
+)
+
+
+:: Test9 - Pumpat nem tud pumpara lerakni
+java application/Program norandom < tests/test9_pumpat_nem_tud_pumpara_lerakni/test9_input_pumpat_nem_tud_pumpara_lerakni.txt > tests/test9_pumpat_nem_tud_pumpara_lerakni/test9_output_pumpat_nem_tud_pumpara_lerakni.txt
+
+set "parancs=findstr /R /N pump[0-9]*\.receivePump(pump[0-9]*) tests\test9_pumpat_nem_tud_pumpara_lerakni\test9_output_pumpat_nem_tud_pumpara_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N A.pumpa.sikeresen.lerakva tests\test9_pumpat_nem_tud_pumpara_lerakni\test9_output_pumpat_nem_tud_pumpara_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST9_PUMPAT_NEM_TUD_PUMPARA_LERAKNI Success!	
+	) else (
+		echo TEST9_PUMPAT_NEM_TUD_PUMPARA_LERAKNI Fail! A pumpa sikeresen lerakva count is not 0.
+	)
+) else (
+  	echo TEST9_PUMPAT_NEM_TUD_PUMPARA_LERAKNI Fail! pump*.receivePump(pump*^) count is not 1.
+)
+
+
+:: Test10 - Pumpat nem tud cisternara lerakni
+java application/Program norandom < tests/test10_pumpat_nem_tud_cisternara_lerakni/test10_input_pumpat_nem_tud_cisternara_lerakni.txt > tests/test10_pumpat_nem_tud_cisternara_lerakni/test10_output_pumpat_nem_tud_cisternara_lerakni.txt
+
+set "parancs=findstr /R /N cistern[0-9]*\.receivePump(pump[0-9]*) tests\test10_pumpat_nem_tud_cisternara_lerakni\test10_output_pumpat_nem_tud_cisternara_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N A.pumpa.sikeresen.lerakva tests\test10_pumpat_nem_tud_cisternara_lerakni\test10_output_pumpat_nem_tud_cisternara_lerakni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST10_PUMPAT_NEM_TUD_CISTERNARA_LERAKNI Success!	
+	) else (
+		echo TEST10_PUMPAT_NEM_TUD_CISTERNARA_LERAKNI Fail! A pumpa sikeresen lerakva count is not 0.
+	)
+) else (
+  	echo TEST10_PUMPAT_NEM_TUD_CISTERNARA_LERAKNI Fail! cistern*.receivePump(pump*^) count is not 1.
+)
+
+
+:: Test11 - Pumpat nem tud lerakni mert nincs neki
+java application/Program norandom < tests/test11_pumpat_nem_tud_lerakni_mert_nincs_neki/test11_input_pumpat_nem_tud_lerakni_mert_nincs_neki.txt > tests/test11_pumpat_nem_tud_lerakni_mert_nincs_neki/test11_output_pumpat_nem_tud_lerakni_mert_nincs_neki.txt
+
+set "parancs=findstr /R /N Nincs.nala.pumpa,.amit.le.lehetne.rakni tests\test11_pumpat_nem_tud_lerakni_mert_nincs_neki\test11_output_pumpat_nem_tud_lerakni_mert_nincs_neki.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N A.pumpa.sikeresen.lerakva tests\test11_pumpat_nem_tud_lerakni_mert_nincs_neki\test11_output_pumpat_nem_tud_lerakni_mert_nincs_neki.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST11_PUMPAT_NEM_TUD_LERAKNI_MERT_NINCS_NEKI Success!	
+	) else (
+		echo TEST11_PUMPAT_NEM_TUD_LERAKNI_MERT_NINCS_NEKI Fail! A pumpa sikeresen lerakva count is not 0.
+	)
+) else (
+  	echo TEST11_PUMPAT_NEM_TUD_LERAKNI_MERT_NINCS_NEKI Fail! Nincs nala pumpa, amit le lehetne rakni count is not 1.
+)
+
+::david_test_vege
+@echo on
+
+
+
+
+
+
+
+
 
 :: Test17 - Szabotőr csövet lyukaszt ki
 java application/Program norandom < tests/test17_szabotor_csovet_lyukaszt/test17_input_szabotor_csovet_lyukaszt.txt > tests/test17_szabotor_csovet_lyukaszt/test17_output_szabotor_csovet_lyukaszt.txt
