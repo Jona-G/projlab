@@ -1,0 +1,264 @@
+Random kikapcsolva.
+Udvozollek ebben a tesztprogramban, kerlek valassz a felkinalt lehetosegek kozul!
+=====> Mit szeretnel csinalni?
+1 Uj jatek inditasa.
+2 Mentett jatek betoltese.
+egyeb Vegeztem, ki szeretnek lepni.
+Game.init()
+Game.addField(source0)
+Game.addField(source1)
+Game.addField(pump0)
+Game.addField(pump1)
+Game.addField(pump2)
+Game.addField(pump3)
+Game.addField(cistern0)
+Game.addField(cistern1)
+Game.addField(pipe0)
+pipe0.becomeNeighbors(source0)
+pipe0.addNeighbor(source0)
+source0.addNeighbor(pipe0)
+pipe0.becomeNeighbors(pump0)
+pipe0.addNeighbor(pump0)
+pump0.addNeighbor(pipe0)
+Game.addField(pipe1)
+pipe1.becomeNeighbors(pump0)
+pipe1.addNeighbor(pump0)
+pump0.addNeighbor(pipe1)
+pipe1.becomeNeighbors(pump1)
+pipe1.addNeighbor(pump1)
+pump1.addNeighbor(pipe1)
+Game.addField(pipe2)
+pipe2.becomeNeighbors(pump1)
+pipe2.addNeighbor(pump1)
+pump1.addNeighbor(pipe2)
+pipe2.becomeNeighbors(cistern0)
+pipe2.addNeighbor(cistern0)
+cistern0.addNeighbor(pipe2)
+Game.addField(pipe3)
+pipe3.becomeNeighbors(source1)
+pipe3.addNeighbor(source1)
+source1.addNeighbor(pipe3)
+pipe3.becomeNeighbors(pump2)
+pipe3.addNeighbor(pump2)
+pump2.addNeighbor(pipe3)
+Game.addField(pipe4)
+pipe4.becomeNeighbors(pump2)
+pipe4.addNeighbor(pump2)
+pump2.addNeighbor(pipe4)
+pipe4.becomeNeighbors(pump3)
+pipe4.addNeighbor(pump3)
+pump3.addNeighbor(pipe4)
+Game.addField(pipe5)
+pipe5.becomeNeighbors(pump3)
+pipe5.addNeighbor(pump3)
+pump3.addNeighbor(pipe5)
+pipe5.becomeNeighbors(cistern1)
+pipe5.addNeighbor(cistern1)
+cistern1.addNeighbor(pipe5)
+Game.addField(pipe6)
+pipe6.becomeNeighbors(pump0)
+pipe6.addNeighbor(pump0)
+pump0.addNeighbor(pipe6)
+pipe6.becomeNeighbors(pump2)
+pipe6.addNeighbor(pump2)
+pump2.addNeighbor(pipe6)
+Game.addField(pipe7)
+pipe7.becomeNeighbors(pump1)
+pipe7.addNeighbor(pump1)
+pump1.addNeighbor(pipe7)
+pipe7.becomeNeighbors(pump3)
+pipe7.addNeighbor(pump3)
+pump3.addNeighbor(pipe7)
+pump0.selectInput(pipe0)
+pump0.selectOutput(pipe1)
+pump1.selectInput(pipe1)
+pump1.selectOutput(pipe2)
+pump2.selectInput(pipe3)
+pump2.selectOutput(pipe4)
+pump3.selectInput(pipe4)
+pump3.selectOutput(pipe5)
+Game.addPlayer(repairman0)
+repairman0.setLocation(source0)
+source0.addPlayer(repairman0)
+Game.addPlayer(repairman1)
+repairman1.setLocation(source1)
+source1.addPlayer(repairman1)
+saboteur0.setLocation(cistern0)
+cistern0.addPlayer(saboteur0)
+cistern0.addPlayer(saboteur0)
+saboteur0.hasPump() Szabotor nem tud pumpat vinni/kapni, ezert a metodus mindig azt mondja, hogy mar van a jatekosnak.
+cistern0.hasNewPipe()
+cistern0.getNeighbors()
+pipe2.getNeighbors()
+cistern0.becomeNeighbors(pipe8)
+cistern0.addNeighbor(pipe8)
+pipe8.addNeighbor(cistern0)
+Game.addField(pipe8)
+saboteur1.setLocation(cistern1)
+cistern1.addPlayer(saboteur1)
+cistern1.addPlayer(saboteur1)
+saboteur1.hasPump() Szabotor nem tud pumpat vinni/kapni, ezert a metodus mindig azt mondja, hogy mar van a jatekosnak.
+cistern1.hasNewPipe()
+cistern1.getNeighbors()
+pipe5.getNeighbors()
+cistern1.becomeNeighbors(pipe9)
+cistern1.addNeighbor(pipe9)
+pipe9.addNeighbor(cistern1)
+Game.addField(pipe9)
+Game.start()
+source0.push()
+source0.getNeighbors()
+pipe0.hasWater() nincs vize
+pipe0.receiveWater(water0)
+pipe0.isDamaged() nem serult
+pipe0.getNeighbors()
+pipe0.receiveWater(water0)
+source1.push()
+source1.getNeighbors()
+pipe3.hasWater() nincs vize
+pipe3.receiveWater(water1)
+pipe3.isDamaged() nem serult
+pipe3.getNeighbors()
+pipe3.receiveWater(water1)
+pump0.push()
+pump0.isDamaged() nem serult
+pump0.hasWater() nincs vize
+pump1.push()
+pump1.isDamaged() nem serult
+pump1.hasWater() nincs vize
+pump2.push()
+pump2.isDamaged() nem serult
+pump2.hasWater() nincs vize
+pump3.push()
+pump3.isDamaged() nem serult
+pump3.hasWater() nincs vize
+cistern0.push() Nem csinal semmit.
+cistern1.push() Nem csinal semmit.
+source0.pull() Nem csinal semmit.
+source1.pull() Nem csinal semmit.
+pump0.pull()
+pump0.isDamaged() nem serult
+pump0.hasWater() nincs vize
+pipe0.hasWater() van vize
+pipe0.removeWater() pipe0 give away water0
+pump0.receiveWater(water0)
+pump1.pull()
+pump1.isDamaged() nem serult
+pump1.hasWater() nincs vize
+pipe1.hasWater() nincs vize
+pump2.pull()
+pump2.isDamaged() nem serult
+pump2.hasWater() nincs vize
+pipe3.hasWater() van vize
+pipe3.removeWater() pipe3 give away water1
+pump2.receiveWater(water1)
+pump3.pull()
+pump3.isDamaged() nem serult
+pump3.hasWater() nincs vize
+pipe4.hasWater() nincs vize
+cistern0.pull()
+cistern0.getNeighbors()
+pipe2.hasWater() nincs vize
+pipe8.hasWater() nincs vize
+cistern1.pull()
+cistern1.getNeighbors()
+pipe5.hasWater() nincs vize
+pipe9.hasWater() nincs vize
+pipe0.pull() Nem csinal semmit.
+pipe1.pull() Nem csinal semmit.
+pipe2.pull() Nem csinal semmit.
+pipe3.pull() Nem csinal semmit.
+pipe4.pull() Nem csinal semmit.
+pipe5.pull() Nem csinal semmit.
+pipe6.pull() Nem csinal semmit.
+pipe7.pull() Nem csinal semmit.
+pipe8.pull() Nem csinal semmit.
+pipe9.pull() Nem csinal semmit.
+repairman0.step()
+repairman0.getLocation()
+source0.isDamaged() Mindig nemet ad vissza.
+Game.getRepairmanScore()
+					Repairmen score: 0
+Game.getSaboteurScore()
+					Saboteur score: 0
+=====> Mit szeretne csinalni a szerelo? repairman0 located at source0 [not damaged]
+1 Lepni valahova.
+2 Megjavitani a mezot, amin all. (Csak csonel es pumpanal lesz ennek eredmenye.)
+3 Szivofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+4 Kimenofejet allitani (Csak pumpanal lesz ennek eredmenye.)
+5 Kivalasztott csoveget felvenni a kezebe.
+6 Kezben levo csoveget csatlakoztatni a mezohoz, amin all. (Csovon allva ennek biztosan nem lesz eredmenye.)
+7 Pumpat lerakni. (Csak csovon allva lesz ennek eredmenye.)
+8 Kilyukasztani a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+9 Ragadossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+egyeb Ne csinaljon semmit.
+repairman0.getLocation()
+source0.getNeighbors()
+repairman0.hasPump()
+Nincs nala pumpa, amit le lehetne rakni
+repairman1.step()
+repairman1.getLocation()
+source1.isDamaged() Mindig nemet ad vissza.
+Game.getRepairmanScore()
+					Repairmen score: 0
+Game.getSaboteurScore()
+					Saboteur score: 0
+=====> Mit szeretne csinalni a szerelo? repairman1 located at source1 [not damaged]
+1 Lepni valahova.
+2 Megjavitani a mezot, amin all. (Csak csonel es pumpanal lesz ennek eredmenye.)
+3 Szivofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+4 Kimenofejet allitani (Csak pumpanal lesz ennek eredmenye.)
+5 Kivalasztott csoveget felvenni a kezebe.
+6 Kezben levo csoveget csatlakoztatni a mezohoz, amin all. (Csovon allva ennek biztosan nem lesz eredmenye.)
+7 Pumpat lerakni. (Csak csovon allva lesz ennek eredmenye.)
+8 Kilyukasztani a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+9 Ragadossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+egyeb Ne csinaljon semmit.
+repairman1.getLocation()
+source1.getNeighbors()
+saboteur0.step()
+saboteur0.getLocation()
+cistern0.isDamaged() Mindig nemet ad vissza.
+Game.getRepairmanScore()
+					Repairmen score: 0
+Game.getSaboteurScore()
+					Saboteur score: 0
+=====> Mit szeretne csinalni a szabotor? saboteur0 located at cistern0 => not damaged
+1 Lepni valahova.
+2 Kilyukasztani a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+3 Szivofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+4 Kimenofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+5 Ragadossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+6 Csuszossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+egyeb Ne csinaljon semmit.
+saboteur0.getLocation()
+cistern0.getNeighbors()
+saboteur1.step()
+saboteur1.getLocation()
+cistern1.isDamaged() Mindig nemet ad vissza.
+Game.getRepairmanScore()
+					Repairmen score: 0
+Game.getSaboteurScore()
+					Saboteur score: 0
+=====> Mit szeretne csinalni a szabotor? saboteur1 located at cistern1 => not damaged
+1 Lepni valahova.
+2 Kilyukasztani a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+3 Szivofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+4 Kimenofejet allitani. (Csak pumpanal lesz ennek eredmenye.)
+5 Ragadossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+6 Csuszossa teszi a mezot, amin all. (Csak csonel lesz ennek eredmenye.)
+egyeb Ne csinaljon semmit.
+saboteur1.getLocation()
+cistern1.getNeighbors()
+					Repairmen score: 0
+					Saboteur score: 0
+=====>Szeretnel menteni es/vagy kilepni?
+1 Mentek es kilepek.
+2 Mentek.
+3 Kilepek.
+egyeb Nem.
+=====> Mit szeretnel csinalni?
+1 Uj jatek inditasa.
+2 Mentett jatek betoltese.
+egyeb Vegeztem, ki szeretnek lepni.
+Koszonom, hogy kiprobaltad ezt a programot!
