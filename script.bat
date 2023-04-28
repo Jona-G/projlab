@@ -273,7 +273,7 @@ if "%count_receivePump%"=="---------- TESTS/TEST20_PUMPA_FELVETELE/TEST20_OUTPUT
 )
 
 
-:: Test21 - Pumpa lerakása
+:: Test21 - Pumpa lerakása betöltés után
 java application/Program norandom < tests/test21_pumpa_lerakasa/test21_input_pumpa_lerakasa.txt > tests/test21_pumpa_lerakasa/test21_output_pumpa_lerakasa.txt
 set count_repairmanPlacepump=0
 set count_pipeReceivePump=0
@@ -281,12 +281,12 @@ for /f "tokens=*" %%a in ('find /c /i "repairman0.placePump()"  tests/test21_pum
 for /f "tokens=*" %%a in ('find /c /i "pipe2.receivePump(pump4)"  tests/test21_pumpa_lerakasa/test21_output_pumpa_lerakasa.txt') do set count_pipeReceivePump=%%a
 if "%count_repairmanPlacepump%"=="---------- TESTS/TEST21_PUMPA_LERAKASA/TEST21_OUTPUT_PUMPA_LERAKASA.TXT: 1" (
 	if "%count_pipeReceivePump%"=="---------- TESTS/TEST21_PUMPA_LERAKASA/TEST21_OUTPUT_PUMPA_LERAKASA.TXT: 1" (
-  		echo TEST21_PUMPA_LERAKASA Success!
+  		echo TEST21_PUMPA_LERAKASA_BETOLTES_UTAN Success!
 	) else (
-		echo TEST21_PUMPA_LERAKASA Fail! pipe2.receivePump(pump4^) count is not 1.
+		echo TEST21_PUMPA_LERAKASA_BETOLTES_UTAN Fail! pipe2.receivePump(pump4^) count is not 1.
 	)
 ) else (
-  	echo TEST21_PUMPA_LERAKASA Fail! repairman0.placePump(^) count is not 1.
+  	echo TEST21_PUMPA_LERAKASA_BETOLTES_UTAN Fail! repairman0.placePump(^) count is not 1.
 )
 
 
