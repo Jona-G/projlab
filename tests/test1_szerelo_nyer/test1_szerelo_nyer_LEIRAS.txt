@@ -1,7 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, senki nem lép, a vizek a ciszternákba folynak és a szerelők nyernek.
-
-100-szor forduljon elő:
-Game.increaseRepairmanScore(1)
-
-0-szor forduljon elő:
-Game.increaseSaboteurScore(1)
