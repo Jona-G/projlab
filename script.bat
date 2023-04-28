@@ -210,7 +210,10 @@ if %counter1%==1 (
 )
 
 ::david_test_vege
-@echo on
+
+
+
+
 
 
 
