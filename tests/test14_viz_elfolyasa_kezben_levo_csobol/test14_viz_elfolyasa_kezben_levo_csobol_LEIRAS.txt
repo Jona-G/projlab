@@ -1,0 +1,7 @@
+Elindítjuk a játékot norandom kapcsolóval, a rep0 2 kör alatt átlép a pump0-ra és a 3. körben átállítja a szívását pipe6-ra.
+A 4. körben a rep0 felveszi a pipe0-át.
+A 0-ás számú cső 2 kör alatt 3-szor(inicializálás + 1kör) kell vizet átadnia, majd lekapcsolódik a szívásról.
+tehát ha 4-szer ad át vizet, akkor valamikor el is folyik belőle egy pluszba miközben felveszik.
+
+4-szer forduljon elő:
+pipe0.removeWater()

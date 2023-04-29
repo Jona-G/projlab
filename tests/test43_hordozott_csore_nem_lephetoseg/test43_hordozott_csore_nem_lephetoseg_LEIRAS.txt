@@ -1,0 +1,8 @@
+Elindítjuk a játékot norandom kapcsolóval, a rep0 2 kör alatt elmegy a pump0-ra, majd a 3. körben felveszi a pipe6-ot.
+A rep1 2 kör alatt elmegy a pump2-re, majd a 3. körben megpróbál átmenni a pipe6-ra, amit fekvett a rep0, ezért nem sikerűl neki.
+
+1-szer forduljon elő:
+"repairman0\.pickupPipe(pipe6)"
+
+1-szer forduljon elő:
+"repairman1 could not move to pipe"
