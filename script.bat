@@ -210,6 +210,85 @@ if %counter1%==1 (
 )
 
 
+:: Test12 - Forras vizet nyom a csobe
+java application/Program norandom < tests/test12_forras_vizet_nyom_a_csobe/test12_input_forras_vizet_nyom_a_csobe.txt > tests/test12_forras_vizet_nyom_a_csobe/test12_output_forras_vizet_nyom_a_csobe.txt
+
+set "parancs=findstr /R /N pipe0\.hasWater().nincs.vize tests\test12_forras_vizet_nyom_a_csobe\test12_output_forras_vizet_nyom_a_csobe.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N pipe0\.removeWater().pipe0.give.away.* tests\test12_forras_vizet_nyom_a_csobe\test12_output_forras_vizet_nyom_a_csobe.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST12_FORRAS_VIZET_NYOM_A_CSOBE Success!
+	) else (
+  		echo TEST12_FORRAS_VIZET_NYOM_A_CSOBE Fail! 
+	)
+) else (
+  	echo TEST12_FORRAS_VIZET_NYOM_A_CSOBE Fail!
+)
+
+
+:: Test13 - Forras vizet nem nyom a csobe
+java application/Program norandom < tests/test13_forras_vizet_nem_nyom_a_csobe/test13_input_forras_vizet_nem_nyom_a_csobe.txt > tests/test13_forras_vizet_nem_nyom_a_csobe/test13_output_forras_vizet_nem_nyom_a_csobe.txt
+
+set "parancs=findstr /R /N pipe0\.removeWater().pipe0.give.away.* tests\test13_forras_vizet_nem_nyom_a_csobe\test13_output_forras_vizet_nem_nyom_a_csobe.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==3 (
+	echo TEST13_FORRAS_VIZET_NEM_NYOM_A_CSOBE Success!
+) else (
+  	echo TEST13_FORRAS_VIZET_NEM_NYOM_A_CSOBE Fail!
+)
+
+
+:: Test14 - Víz elfolyása kézben lévő csőből
+java application/Program norandom < tests/test14_viz_elfolyasa_kezben_levo_csobol/test14_input_viz_elfolyasa_kezben_levo_csobol.txt > tests/test14_viz_elfolyasa_kezben_levo_csobol/test14_output_viz_elfolyasa_kezben_levo_csobol.txt
+
+set "parancs=findstr /R /N pipe0\.removeWater().pipe0.give.away.* tests\test14_viz_elfolyasa_kezben_levo_csobol\test14_output_viz_elfolyasa_kezben_levo_csobol.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==4 (
+	echo TEST14_VIZ_ELFOLYASA_KEZBEN_LEVO_CSOBOL Success!
+) else (
+  	echo TEST14_VIZ_ELFOLYASA_KEZBEN_LEVO_CSOBOL Fail!
+)
+
+
+:: Test15 - Csövet nem lehet felvenni, mert állnak rajta
+java application/Program norandom < tests/test15_csovet_nem_lehet_felvenni_mert_allnak_rajta/test15_input_csovet_nem_lehet_felvenni_mert_allnak_rajta.txt > tests/test15_csovet_nem_lehet_felvenni_mert_allnak_rajta/test15_output_csovet_nem_lehet_felvenni_mert_allnak_rajta.txt
+
+set "parancs=findstr /R /N Allnak.a.csovon,.nem.lehet.felvenni\. tests\test15_csovet_nem_lehet_felvenni_mert_allnak_rajta\test15_output_csovet_nem_lehet_felvenni_mert_allnak_rajta.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST15_CSOVET_NEM_LEHET_FELVENNI_MERT_ALLNAK_RAJTA Success!
+) else (
+  	echo TEST15_CSOVET_NEM_LEHET_FELVENNI_MERT_ALLNAK_RAJTA Fail!
+)
+
+
+:: Test16 - Szerelő csövet kilyukaszt
+java application/Program norandom < tests/test16_szerelo_csovet_kilyukaszt/test16_input_szerelo_csovet_kilyukaszt.txt > tests/test16_szerelo_csovet_kilyukaszt/test16_output_szerelo_csovet_kilyukaszt.txt
+
+set "parancs=findstr /R /N repairman0\.puncture() tests\test16_szerelo_csovet_kilyukaszt\test16_output_szerelo_csovet_kilyukaszt.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N pipe0\.isDamaged().serult tests\test16_szerelo_csovet_kilyukaszt\test16_output_szerelo_csovet_kilyukaszt.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST16_SZERELO_CSOVET_KILYUKASZT Fail!
+	) else (
+  		echo TEST16_SZERELO_CSOVET_KILYUKASZT Success!
+	)
+) else (
+  	echo TEST16_SZERELO_CSOVET_KILYUKASZT Fail!
+)
+
+
 :: Test17 - Szabotőr csövet lyukaszt ki
 java application/Program norandom < tests/test17_szabotor_csovet_lyukaszt/test17_input_szabotor_csovet_lyukaszt.txt > tests/test17_szabotor_csovet_lyukaszt/test17_output_szabotor_csovet_lyukaszt.txt
 set count_receivePuncture=0
@@ -445,3 +524,59 @@ if %counter1%==1 (
 ) else (
   	echo TEST40_CSUSZOS_CSORE_LEPES Fail! pipe*.tryToBecomeSlippery(^) count is not 1.
 )
+
+
+:: Test41 - Két szerelő egy pumpára áll
+java application/Program norandom < tests/test41_ket_szerelo_egy_pumpara_all/test41_input_ket_szerelo_egy_pumpara_all.txt > tests/test41_ket_szerelo_egy_pumpara_all/test41_output_ket_szerelo_egy_pumpara_all.txt
+
+set "parancs=findstr /R /N repairman0.located.at.pump2 tests\test41_ket_szerelo_egy_pumpara_all\test41_output_ket_szerelo_egy_pumpara_all.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N repairman1.located.at.pump2 tests\test41_ket_szerelo_egy_pumpara_all\test41_output_ket_szerelo_egy_pumpara_all.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==0 (
+		echo TEST41_KET_SZERELO_EGY_PUMPARA_ALL Fail!
+	) else (
+  		echo TEST41_KET_SZERELO_EGY_PUMPARA_ALL Success!
+	)
+) else (
+  	echo TEST41_KET_SZERELO_EGY_PUMPARA_ALL Fail!
+)
+
+
+:: Test42 - Szabotőr nem tud egy szabad végű csőre lépni
+java application/Program norandom < tests/test42_szabotor_nem_tud_egy_szabad_vegu_csore_lepni/test42_input_szabotor_nem_tud_egy_szabad_vegu_csore_lepni.txt > tests/test42_szabotor_nem_tud_egy_szabad_vegu_csore_lepni/test42_output_szabotor_nem_tud_egy_szabad_vegu_csore_lepni.txt
+
+set "parancs=findstr /R /N saboteur0.could.not.move.to.pipe. tests\test42_szabotor_nem_tud_egy_szabad_vegu_csore_lepni\test42_output_szabotor_nem_tud_egy_szabad_vegu_csore_lepni.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST42_SZABOTOR_NEM_TUD_EGY_SZABAD_VEGU_CSORE_LEPNI Success!
+) else (
+  	echo TEST42_SZABOTOR_NEM_TUD_EGY_SZABAD_VEGU_CSORE_LEPNI Fail!
+)
+
+
+:: Test43 - Hordozott csőre nem léphetőség
+java application/Program norandom < tests/test43_hordozott_csore_nem_lephetoseg/test43_input_hordozott_csore_nem_lephetoseg.txt > tests/test43_hordozott_csore_nem_lephetoseg/test43_output_hordozott_csore_nem_lephetoseg.txt
+
+set "parancs=findstr /R /N repairman0\.pickupPipe(pipe6) tests\test43_hordozott_csore_nem_lephetoseg\test43_output_hordozott_csore_nem_lephetoseg.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+set "parancs=findstr /R /N repairman1.could.not.move.to.pipe6 tests\test43_hordozott_csore_nem_lephetoseg\test43_output_hordozott_csore_nem_lephetoseg.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+
+if %counter1%==1 (
+	if %counter2%==1 (
+		echo TEST43_HORDOZOTT_CSORE_NEM_LEPHETOSEG Success!
+	) else (
+  		echo TEST43_HORDOZOTT_CSORE_NEM_LEPHETOSEG Fail! repairman1 could not move to pipe 6 count is not 0.
+	)
+) else (
+  	echo TEST43_HORDOZOTT_CSORE_NEM_LEPHETOSEG Fail! repairman0.pickupPipe(pipe6^) count is not 0.
+)
+
+
+@echo on
