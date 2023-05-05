@@ -1,0 +1,2 @@
+Ebben a tesztben azt próbáljuk ki, hogyha felvettünk egy csövet azt le is tudjuk-e rakni. Ehhez a játékban eljutunk addig az állapotig,
+hogy az egyik szerelőnél legyen egy cső és egy másik pumpán legyen. Ekkor lerakjuk a csövet. Az elvárt kimenet, hogy ez sikerül.
