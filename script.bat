@@ -397,6 +397,117 @@ if "%count_repairman0Repair%"=="---------- TESTS/TEST24_CSO_MEGJAVITASA/TEST24_O
 )
 
 
+:: Test25 - Cso felvetele
+java application/Program norandom < tests/test25_cso_felvetele/test25_input_cso_felvetele.txt > tests/test25_cso_felvetele/test25_output_cso_felvetele.txt
+
+set "parancs=findstr /R /N repairman[0-9]*\.pickupPipe(pipe[0-9]*) tests\test25_cso_felvetele\test25_output_cso_felvetele.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST25_CSO_FELVETELE Success!
+) else (
+	echo TEST25_CSO_FELVETELE Fail! repairman*.pickupPipe(pipe*^) count is not 1.
+)
+
+
+:: Test26 - Cso lerakasa
+
+java application/Program norandom < tests/test26_cso_lerakasa/test26_input_cso_lerakasa.txt> tests/test26_cso_lerakasa/test26_output_cso_lerakasa.txt
+
+set "parancs=findstr /R /N A.lerakas.sikeres.volt tests\test26_cso_lerakasa\test26_output_cso_lerakasa.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST26_CSO_LERAKASA Success!
+) else (
+	echo TEST26_CSO_LERAKASA Fail! 
+)
+
+
+:: Test27 - Cso ervenytelen lerakasa
+
+java application/Program norandom < tests/test27_cso_ervenytelen_lerakasa/test27_input_cso_ervenytelen_lerakasa.txt> tests/test27_cso_ervenytelen_lerakasa/test27_output_cso_ervenytelen_lerakasa.txt
+
+set "parancs=findstr /R /N A.lerakas.sikertelen.volt tests\test27_cso_ervenytelen_lerakasa\test27_output_cso_ervenytelen_lerakasa.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST27_CSO_ERVENYTELEN_LERAKASA Success!
+) else (
+	echo TEST27_CSO_ERVENYTELEN_LERAKASA Fail! 
+)
+
+
+:: Test28 Ragaszott cso serthetetlensege lejar
+
+java application/Program 12345 < tests/test28_ragasztott_cso_serthetetlensege_lejar/test28_input_ragasztott_cso_serthetetlensege_lejar.txt > tests/test28_ragasztott_cso_serthetetlensege_lejar/test28_output_ragasztott_cso_serthetetlensege_lejar.txt
+set "parancs=findstr /R /N pipe2\.setDamaged.true. tests\test28_ragasztott_cso_serthetetlensege_lejar\test28_output_ragasztott_cso_serthetetlensege_lejar.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+set "parancs=findstr /R /N Most.nem.lehet.kilyukasztani tests\test28_ragasztott_cso_serthetetlensege_lejar\test28_output_ragasztott_cso_serthetetlensege_lejar.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter2=%%a
+if %counter1%==2 (
+	if %counter2%==1 (
+  		echo TEST28_RAGASZTOTT_CSO_SERTHETETLENSEGE_LEJAR Success!
+	) else (
+		echo TEST28_RAGASZTOTT_CSO_SERTHETETLENSEGE_LEJAR Fail! Most nem lehet kilyukasztani count is not 1.
+	)
+) else (
+  	echo TEST28_RAGASZTOTT_CSO_SERTHETETLENSEGE_LEJAR Fail! pipe2.setDamaged(true^) count is not 2.
+)
+
+
+:: Test29 - Szerelonel mar van cso
+
+java application/Program norandom < tests/test29_szerelonel_mar_van_cso/test29_input_szerelonel_mar_van_cso.txt> tests/test29_szerelonel_mar_van_cso/test29_output_szerelonel_mar_van_cso.txt
+
+set "parancs=findstr /R /N Mar.van.cso tests\test29_szerelonel_mar_van_cso\test29_output_szerelonel_mar_van_cso.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST29_SZERELONEL_MAR_VAN_CSO Success!
+) else (
+	echo TEST29_SZERELONEL_MAR_VAN_CSO Fail! 
+)
+
+
+:: Test30 - Szerelonel nincs cso
+
+java application/Program norandom < tests/test30_szerelonel_nincs_cso/test30_input_szerelonel_nincs_cso.txt> tests/test30_szerelonel_nincs_cso/test30_output_szerelonel_nincs_cso.txt
+
+set "parancs=findstr /R /N Nincs.a.kezeben.cso tests\test30_szerelonel_nincs_cso\test30_output_szerelonel_nincs_cso.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+
+if %counter1%==1 (
+	echo TEST30_SZERELONEL_NINCS_CSO Success!
+) else (
+	echo TEST30_SZERELONEL_NINCS_CSO Fail! 
+)
+
+
+:: Test31 Cso ragadasa lejar
+
+java application/Program norandom < tests/test31_ragados_cso_ragadasa_lejar/test31_input_ragados_cso_ragadasa_lejar.txt > tests/test31_ragados_cso_ragadasa_lejar/test31_output_ragados_cso_ragadasa_lejar.txt
+set "parancs=findstr /R /N Ragacsos.csore.lepett tests\test31_ragados_cso_ragadasa_lejar\test31_output_ragados_cso_ragadasa_lejar.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+if %counter1%==0 (
+  	echo TEST31_RAGADOS_CSO_RAGADASA_LEJAR Success!
+) else (
+  	echo TEST31_RAGADOS_CSO_RAGADASA_LEJAR Fail! Ragados csore lepett...(^) count is not 0.
+)
+
+
+:: Test32 Cso csuszossaga lejar
+
+java application/Program norandom < tests/test32_csuszos_cso_csuszossaga_lejar/test32_input_csuszos_cso_csuszossaga_lejar.txt > tests/test32_csuszos_cso_csuszossaga_lejar/test32_output_csuszos_cso_csuszossaga_lejar.txt
+set "parancs=findstr /R /N At.fog.csuszni tests\test32_csuszos_cso_csuszossaga_lejar\test32_output_csuszos_cso_csuszossaga_lejar.txt | find /C ":""
+for /f %%a in ('!parancs!') do set counter1=%%a
+if %counter1%==0 (
+  	echo TEST32_CSO_CSUSZOSSAGA_LEJAR Success!
+) else (
+  	echo TEST32_CSO_CSUSZOSSAGA_LEJAR Fail! At fog csuszni valahova(^) count is not 0.
+)
+
+
 :: Test33 - Pumpa elromlik
 java application/Program 12345 < tests/test33_pumpa_elromlik/test33_input_pumpa_elromlik.txt > tests/test33_pumpa_elromlik/test33_output_pumpa_elromlik.txt
 set count_pumpisdamaged=0
