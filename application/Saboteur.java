@@ -20,7 +20,7 @@ public class Saboteur extends Player {
 	@Override
 	public void step() {
 		System.out.println(this + ".step()");
-		super.step();
+		super.step();/*
 		Field location = this.getLocation();
 		boolean isLocationDamaged = location.isDamaged();
 		
@@ -66,6 +66,6 @@ public class Saboteur extends Player {
 			this.tryToMakeSlippery();
 		} else {
 			// Do nothing...
-		}
+		}*/
 	}	
 }

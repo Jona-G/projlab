@@ -55,5 +55,16 @@ public class Cistern extends Field {
 		}
 		
 		return false;
-	}	
+	}
+	
+	@Override
+	public Field showNewPipe() {
+		for (Field pipe : this.getNeighbors()) {
+			if (pipe.getNeighbors().size() == 1 && !pipe.isCarried()) {
+				return pipe;
+			}
+		}
+		
+		return null;
+	}
 }

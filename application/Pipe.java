@@ -165,6 +165,7 @@ public class Pipe extends VulnerableField {
 		pipe.becomeNeighbors(x);
 		pipe.becomeNeighbors(pumpInTheBackpack);
 		pumpInTheBackpack.selectOutput(pipe);
+		Game.getFieldList().add(pipe);
 		
 		return true;
 	}

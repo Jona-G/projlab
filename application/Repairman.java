@@ -26,7 +26,7 @@ public class Repairman extends Player {
 	@Override
 	public void step() {
 		System.out.println(this + ".step()");
-		super.step();
+		super.step();/*
 		Field location = this.getLocation();
 		boolean isLocationDamaged = location.isDamaged();
 		
@@ -50,17 +50,6 @@ public class Repairman extends Player {
 		int neighborSize = neighbors.size();
 		
 		if (answer == 1) {
-			/*
-			if (neighborSize == 0) {
-				System.out.println("Nincs hova lepni...");
-				return;
-			}
-			System.out.println("=====> Hova szeretne lepni? " + this + " located at " + location + " => " + (isLocationDamaged ? "damaged" : "not damaged"));
-			for (int i = 0; i < neighborSize - 1; ++i) {
-				System.out.println((i + 1) + " " + neighbors.get(i));
-			}
-			System.out.println("egyeb " + neighbors.get(neighborSize - 1));
-			*/
 			
 			if (!Skeleton.printNeighbors(this, "=====> Hova szeretne lepni?", "Nincs hova lepni...")) {
 				return;
@@ -71,19 +60,6 @@ public class Repairman extends Player {
 		} else if (answer == 2) {
 			this.repair();
 		} else if (answer == 3) {
-			/*
-			if (neighborSize == 0) {
-				System.out.println("Nincs mihez csatlakoznia...");
-				return;
-			}
-			System.out.println("=====> Mihez csatlakozzon a szivofej?");
-			for (int i = 0; i < neighborSize - 1; ++i) {
-				System.out.println((i + 1) + " " + neighbors.get(i));
-			}
-			System.out.println("egyeb " + neighbors.get(neighborSize - 1));
-			answer = Skeleton.readNumber() - 1;
-			answer = (answer < 0 || answer > neighborSize - 1) ? neighborSize - 1 : answer;
-			*/
 			if (!Skeleton.printNeighbors(this, "=====> Mihez csatlakozzon a szivofej?", "Nincs mihez csatlakoznia...")) {
 				return;
 			}
@@ -111,7 +87,7 @@ public class Repairman extends Player {
 			this.tryToMakeSticky();
 		} else {
 			// Do nothing...
-		}
+		}*/
 	}
 	
 	// Megnezi, hogy van-e nala pumpa.
@@ -135,17 +111,25 @@ public class Repairman extends Player {
 	}
 	
 	// Ha van pumpaja es a mezore, amin all, le lehet tenni a pumpat, akkor leteszi es eltavolitja a hatizsakbol. 
-	public void placePump() {
+	public boolean placePump() {
 		if (!this.hasPump()) {
 			System.out.println("Nincs nala pumpa, amit le lehetne rakni");
-			return;
+			return false;
 		}
 		System.out.println(this + ".placePump()");
 		if (this.hasPump() && this.getLocation().receivePump(pumpInTheBackpack)) {
 			this.move(pumpInTheBackpack);
 			pumpInTheBackpack = null;
 			System.out.println("A pumpa sikeresen lerakva");
+			return true;
 		}
+		
+		return false;
+	}
+	
+	@Override
+	public Field showPumpInBackPack() {
+		return pumpInTheBackpack;
 	}
 	
 	// Ha nincs a szerelo kezeben cso, akkor megprobalja felvenni a pipe-ot.
