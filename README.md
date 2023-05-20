@@ -1,2 +1,2 @@
 # projlab
-Itt, a main branch-ben vannak az elkészült tesztesetek és a legújabb forráskód is!
+A grafikus program a **david4grafikus** branch-ben van, NEM ITT!!
