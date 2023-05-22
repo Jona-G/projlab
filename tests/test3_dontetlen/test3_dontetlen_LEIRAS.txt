@@ -1,4 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, az egyik szabotőr kilyukaszt egy csövet, majd senki sem lép többet, így pontosan annyi víz folyik el, mint amennyi a ciszternába jut, a játék állása ezért döntetlen lesz.
-
-1-szer forduljon elő:
-It is a draw!

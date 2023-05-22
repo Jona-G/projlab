@@ -1,5 +1,0 @@
-Elindítjuk a játékot norandom módon, az egyik szerelő átlép az egyik ciszternára és itt kap egy új pumpát.
-(Pumpát csak a szerelő kaphat csak akkor, ha egy ciszternára lép, ezt ellenőrizzük.)
-
-1-szer forduljon elő:
-repairman0.receivePump(pump4)

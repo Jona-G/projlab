@@ -1,5 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, a sab0 megpróbál átlépni a frissen keletkezett pipe8-ra.
-Nem sikerűl neki.
-
-1-szer forduljon elő:
-"saboteur0 could not move to pipe"

@@ -1,2 +1,0 @@
-Ebben a tesztben megpróbálunk egy szerelővel úgy felvenni csövet, hogy már van nála egy.
-Elvárt kimenet, hogy ez nem sikerül.

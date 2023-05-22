@@ -1,4 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, a rep0 2 kör alatt átlép a pump0-ra és a 3. körben átállítja a szívását pipe6-ra.A pipe0-nak 3 kör alatt 4-szer(inicializálás + 1kör) kell vizet átadnia, hogy a forrás 4x nyomhasson vizet. Így a forrrás nem nyom 1x vizet.
-
-3-szer forduljon elő:
-pipe0.removeWater()

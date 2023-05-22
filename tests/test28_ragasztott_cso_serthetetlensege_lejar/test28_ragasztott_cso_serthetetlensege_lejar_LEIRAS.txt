@@ -1,2 +1,0 @@
-Teszteljük, hogy adott seedel determinisztikusan lejár-e a cső sérthetetlensége egy bizonyos idő után.
-Elvárt kimenet, hogy a csőnek a sebezhetetlensége lejár és ki tudjuk lyukasztani.
