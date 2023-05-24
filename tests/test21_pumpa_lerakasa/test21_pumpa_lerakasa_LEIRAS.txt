@@ -1,9 +1,0 @@
-Ez a teszt az előzőre épül (ezen sor írásakor azt test20-nak hívják) az ott elmentett állást 
-(szerelő pumpával a kezében áll egy ciszternán) folytatja, elmegy egy csőre és ott lerakja a felvett
-pumpát.
-
-repairman0.placePump()
-Egyszer kell írva lennie (akkor hívódik, amikor a szerelo lerakja a pumpát.)
-
-pipe2.receivePump(pump4)
-Akkor íródik ki, amikor a pumpa4-et lerakja a szerelő a 2-es csőre.

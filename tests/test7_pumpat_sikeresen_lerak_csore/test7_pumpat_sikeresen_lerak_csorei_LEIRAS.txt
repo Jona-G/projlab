@@ -1,7 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, az egyik szerelő átsétál a ciszternára, kap egy pumpát, visszalép egy csőre, és ott lerakja a pumpát. Ezt követően kilépünk.
-
-1-szer forduljon elő:
-repairman*.receivePump(pump*)
-
-1-szer forduljon elő:
-A pumpa sikeresen lerakva

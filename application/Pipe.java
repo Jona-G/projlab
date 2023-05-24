@@ -18,6 +18,10 @@ public class Pipe extends VulnerableField {
 		return "pipe" + id;
 	}
 	
+	public static void resetId() {
+		staticId = 0;
+	}
+	
 	/*
 	 * Megmondja, hogy viszik-e a csovet.
 	 */
@@ -165,6 +169,7 @@ public class Pipe extends VulnerableField {
 		pipe.becomeNeighbors(x);
 		pipe.becomeNeighbors(pumpInTheBackpack);
 		pumpInTheBackpack.selectOutput(pipe);
+		Game.getFieldList().add(pipe);
 		
 		return true;
 	}

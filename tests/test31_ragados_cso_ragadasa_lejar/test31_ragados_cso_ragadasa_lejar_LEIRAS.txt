@@ -1,2 +1,0 @@
-Teszteljük, hogy a ragadós cső egy bizonyos idő után már nem ragad.
-Az elvárt kimenet az adott csövön egyszer meghívott clearSticky() függvény.

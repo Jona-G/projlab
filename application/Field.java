@@ -17,6 +17,10 @@ public abstract class Field implements Serializable {
 		return false;
 	}
 	
+	public FieldView getView() {
+		return Game.getFieldMap().get(this);
+	}
+	
 	/*
 	 * Polimorfikus fuggveny, itt nem csinal semmit, a Pipe override-olja.
 	 */
@@ -217,5 +221,9 @@ public abstract class Field implements Serializable {
 		}
 		
 		return false;
+	}
+	
+	public Field showNewPipe() {
+		return null;
 	}
 }

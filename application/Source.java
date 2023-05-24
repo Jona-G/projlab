@@ -13,6 +13,10 @@ public class Source extends Field {
 		return "source" + id;
 	}
 	
+	public static void resetId() {
+		staticId = 0;
+	}
+	
 	// Vegigmegy az osszes szomszedjan, ha nincs nekik vizuk, akkor ad nekik egy ujat.
 	public void push() {
 		System.out.println(this + ".push()");

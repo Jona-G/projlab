@@ -1,7 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, az egyik szerelő megpróbál pumpát lerakni, de nem lesz sikeres, mert nincs neki. Ezt követően kilépünk.
-
-1-szer forduljon elő:
-Nincs nala pumpa, amit le lehetne rakni
-
-0-szer forduljon elő:
-A pumpa sikeresen lerakva

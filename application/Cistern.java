@@ -13,6 +13,10 @@ public class Cistern extends Field {
 		return "cistern" + id;
 	}
 	
+	public static void resetId() {
+		staticId = 0;
+	}
+	
 	// Felelossege hogy megnezze az osszes szomszedjan, hogy van-e ott viz,
 	// ha van akkor elveszi es ez a viz a ciszternaba jut.
 	@Override
@@ -55,5 +59,16 @@ public class Cistern extends Field {
 		}
 		
 		return false;
-	}	
+	}
+	
+	@Override
+	public Field showNewPipe() {
+		for (Field pipe : this.getNeighbors()) {
+			if (pipe.getNeighbors().size() == 1 && !pipe.isCarried()) {
+				return pipe;
+			}
+		}
+		
+		return null;
+	}
 }

@@ -1,3 +1,0 @@
-Ebben a tesztben megpróbálunk a szerelővel felvenni egy csövet, majd azt a következő pumpán lerakni.
-Mivel a csőnek eddig is szomszédja volt a cél pumpa, így nem történik lerakás.
-Az elvárt kimenet, hogy sikertelen lesz a lerakás.

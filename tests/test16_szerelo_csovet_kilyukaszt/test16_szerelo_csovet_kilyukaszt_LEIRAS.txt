@@ -1,9 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, a rep0 1 kör alatt átlép a pipe0-ra.
-A 2. körben kilyukasztja azt, majd 1 kör lemegy, hogy meg is jelenjen vizuálisan a sérülés.
-A többiek nem csinálnak semmit.
-
-1-szer forduljon elő:
-repairman0.puncture()
-
-ne 0-szor forduljon elő:
-pipe0.isDamaged() "serult"

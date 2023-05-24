@@ -1,4 +1,0 @@
-Elindítjuk a játékot norandom módon, az egyik szerelő ragadóssá teszi az egyik forrással szomszédos csövet.
-
-1-szer forduljon elő:
-pipe0.tryToBecomeSticky()

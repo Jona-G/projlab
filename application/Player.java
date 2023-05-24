@@ -18,10 +18,22 @@ public abstract class Player implements Serializable {
 		}
 	}
 	
+	public int getParalyzedTime() {
+		return paralyzedTime;
+	}
+	
+	public PlayerView getView() {
+		return Game.getPlayerMap().get(this);
+	}
+	
 	/*
 	 * 
 	 */
 	public Field showPipeInHand() {
+		return null;
+	}
+	
+	public Field showPumpInBackPack() {
 		return null;
 	}
 	

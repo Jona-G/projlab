@@ -15,6 +15,10 @@ public class Pump extends VulnerableField {
 		return "pump" + id;
 	}
 	
+	public static void resetId() {
+		staticId = 0;
+	}
+	
 	
 	// Override az input es output miatt, azoknak az erteke null lesz, ha leveszik
 	// roluk a csovet. Ilyenkor nem tud majd kitolni, vagy beszivni, mert ott el van zarva a fej.

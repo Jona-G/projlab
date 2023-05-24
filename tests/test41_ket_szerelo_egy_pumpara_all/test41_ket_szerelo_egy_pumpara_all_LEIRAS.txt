@@ -1,9 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, a rep1 2 kör alatt átlép a pump2-re, majd ott áll végig.
-A rep0 4 kör alatt átlép a pump2-re és vár 1 kört hogy látható legyen hogy hol áll épp.
-A többiek nem csinálnak semmit.
-
-1-szer forduljon elő:
-"repairman0 located at pump2"
-
-ne 0-szor forduljon elő:
-"repairman1 located at pump2"

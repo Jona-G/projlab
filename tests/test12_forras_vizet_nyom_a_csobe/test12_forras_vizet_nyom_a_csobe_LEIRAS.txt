@@ -1,7 +1,0 @@
-Elindítjuk a játékot norandom kapcsolóval, senki sem lép, a 0-ás számú csőbe nincs víz, majd átadja valakinek miután kapott egyet.
-
-1-szer forduljon elő:
-pipe0.hasWater()
-
-1-szer forduljon elő:
-pipe0.removeWater()
