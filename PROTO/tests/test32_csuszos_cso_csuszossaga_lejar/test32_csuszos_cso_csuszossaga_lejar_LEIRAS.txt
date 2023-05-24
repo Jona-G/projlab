@@ -1,0 +1,3 @@
+Teszteljük, hogy a csúszós cső egy bizonyos idő után már nem csúszik.
+Elvárt kimenet, hogy miután vártunk, egy kis időt. Ha rálépünk a csőre amit csúszóssá tettünk
+már ne legyen az.

@@ -1,0 +1,3 @@
+Ebben a tesztben leteszteljük, hogy működik-e a csőnek a felvétele.
+Ennek céljából megpróbálunk indítás után egy szerelővel felvenni egy csövet.
+Az elvárt kimenet, hogy a szerelő felvette a csövet.

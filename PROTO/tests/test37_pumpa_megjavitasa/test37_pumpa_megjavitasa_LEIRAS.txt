@@ -1,0 +1,10 @@
+Elindítjuk a játékot az 12345 seed beállítással, ahol a pump0 már az első körben elromlik. Egy szerelő (repairman0) rálép erre a pumpára és megjavítja. (Amikor rálép a szerelő, akkor még sérült a pumpa, de miután megjavítja, már nem lesz sérült a pumpa; ezt teszteljük.)
+
+1-szer forduljon elő:
+repairman0 located at pump0 [damaged]
+
+1-szer forduljon elő:
+pump0.receiveRepair()
+
+1-szer forduljon elő:
+repairman0 located at pump0 [not damaged]

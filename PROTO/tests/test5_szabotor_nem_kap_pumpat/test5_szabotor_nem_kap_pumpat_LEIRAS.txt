@@ -1,0 +1,4 @@
+Elindítjuk a játékot norandom kapcsolóval, az egyik szabotőr lelép a ciszternáról, majd visszalép rá, ekkor nem kaphat pumpát.
+
+0-szor forduljon elő:
+saboteur*.receivePump(pump*)

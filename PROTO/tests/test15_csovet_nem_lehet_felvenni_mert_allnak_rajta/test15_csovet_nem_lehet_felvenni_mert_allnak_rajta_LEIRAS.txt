@@ -1,0 +1,6 @@
+Elindítjuk a játékot norandom kapcsolóval, a rep0 3 kör alatt átlép a pipe6-ra. A rep1 2 kör alatt átlép a pump2-re.
+A 3. körben a rep1 megpróbálja felvenni a pipe6-ot, de nem tudja mert állnak rajta.
+A többiek nem csinálnak semmit.
+
+1-szer forduljon elő:
+"Allnak a csovon, nem lehet felvenni."

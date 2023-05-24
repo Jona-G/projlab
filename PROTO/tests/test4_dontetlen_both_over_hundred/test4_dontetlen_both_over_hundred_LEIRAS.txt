@@ -1,0 +1,7 @@
+Elindítjuk a játékot norandom kapcsolóval, az egyik szabotőr kilyukasz egy csövet, így az elfolyó és e befolyó víz egyenletes. A két szerelő beköt egy-egy extra csövet a két forrás és ciszterna közé, de pont ekkor a másik szabotőr kilyukaszt egy másik csövet is, így most két csőből folyik el a víz és két csőből folyik a ciszternákba is, így a pontszámok növekedése egyforma, de úgy lett időzítve, hogy az egyik kör végén mindkét csapatnak még csak 99 pontja van, majd a következő körben mindketten átlépik a száz pontot, és a program így értékeli ki a döntetlent.
+
+101-szer forduljon elő:
+Game.increaseRepairmanScore(1)
+
+1-szer forduljon elő:
+It is a draw!
