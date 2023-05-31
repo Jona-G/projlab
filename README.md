@@ -2,11 +2,11 @@
 Ez a Szoftver projekt laboratórium tárgyra készült program grafikus változata.
 
 A git_egylet tagjai:
-Reményi Dávid István
-Duchaj János
-Gánicz Péter
-Nagy András Tamás
-Pribék Jonatán
+- Reményi Dávid István
+- Duchaj János
+- Gánicz Péter
+- Nagy András Tamás
+- Pribék Jonatán
 
 _Feladatleírás:_ **Sivatagi vízhálózat**
 
