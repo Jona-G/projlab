@@ -1,5 +1,5 @@
 # git_egylet - projlab
-Ez a Szoftver projekt laboratórium tárgyra készült program grafikus változata.
+Ez a BME 2023-as Szoftver projekt laboratórium tárgyára készült program grafikus változata.
 
 A git_egylet tagjai:
 - Reményi Dávid István
